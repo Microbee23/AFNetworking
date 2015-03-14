@@ -57,4 +57,15 @@ Pod::Spec.new do |s|
     ss.ios.source_files = 'UIKit+AFNetworking'
     ss.osx.source_files = ''
   end
+
+    s.subspec 'WatchKit' do |ss|
+    ss.ios.deployment_target = '8.2'
+
+    ss.dependency 'AFNetworking/NSURLConnection'
+    ss.dependency 'AFNetworking/NSURLSession'
+
+    ss.ios.public_header_files = 'WatchKit+AFNetworking/*.h'
+    ss.ios.source_files = 'WatchKit+AFNetworking'
+    ss.osx.source_files = ''
+  end
 end
